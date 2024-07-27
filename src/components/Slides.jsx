@@ -46,8 +46,19 @@ const Slides = () => {
         return;
       }
       setSlidesData(data);
+    } else if (globalState.filterText) {
+      setSlidesData(globalState.filterByType);
+      return;
+    } else if (globalState.filterDate.length > 0 && data) {
+      let arr = globalState.filterDate.map((item) => Number(item));
+      let filtered = data.filter((item) =>
+        arr.includes(new Date(item.date * 1000).getFullYear())
+      );
+      setSlidesData(filtered);
+      return;
+    } else {
+      setSlidesData(data);
     }
-    setSlidesData(data);
   }, [globalState, data]);
 
   return (

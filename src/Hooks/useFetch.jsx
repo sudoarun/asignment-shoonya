@@ -14,7 +14,6 @@ const useFetch = (api) => {
             setLoading(false);
             return;
           }
-          console.log(data);
           setData(data);
           setLoading(false);
         })
@@ -27,6 +26,7 @@ const useFetch = (api) => {
     setError("Please provide api");
     setLoading(false);
   }, [api]);
+  // console.log(api);
   return { data, loading, error };
 };
 

@@ -16,7 +16,7 @@ const Cards = ({ data }) => {
         <p className="line-limit">{description && description}</p>
         <span className="block">Date : {newDate && newDate}</span>
         <span className="block">Location : {location && location}</span>
-        <span className="block">Price : {price && price}</span>
+        <span className="block">Price : ${price && price}</span>
       </div>
     </div>
   );

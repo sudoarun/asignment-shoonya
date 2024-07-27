@@ -6,6 +6,11 @@ const App = () => {
   const [globalState, setGlobalState] = useState({
     searchText: "",
     searchData: [],
+    filterByType: [],
+    filteredByDate: [],
+    filterDate: [],
+    filterText: "",
+    allData: [],
   });
   return (
     <>

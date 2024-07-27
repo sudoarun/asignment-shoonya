@@ -41,7 +41,7 @@ const SearchInput = () => {
       placeholder="Search retreats by title"
       value={search}
       onChange={searchHandle}
-      className="outline border text-slate-700 sm:text-white py-2 px-2 sm:w-60 rounded-md outline-none w-full "
+      className="border sm:outline-none sm:border-none sm:bg-blue-950 text-slate-700 sm:text-white py-2 px-2 sm:w-60 rounded-md  w-full "
     />
   );
 };
