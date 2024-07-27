@@ -9,6 +9,12 @@ const useFetch = (api) => {
       fetch(api)
         .then((res) => res.json())
         .then((data) => {
+          if (data === "Not found") {
+            setError("Not Found");
+            setLoading(false);
+            return;
+          }
+          console.log(data);
           setData(data);
           setLoading(false);
         })
