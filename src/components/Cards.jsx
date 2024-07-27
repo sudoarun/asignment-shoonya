@@ -1,19 +1,18 @@
 import React from "react";
 
-const Cards = () => {
+const Cards = ({ data }) => {
+  const { title, price, location, image, description, date } = data;
+  const newDate = new Date(date * 1000).toLocaleString();
   return (
     <div className="bg-[#E0D9CF] p-3 rounded-md">
       <div>
-        <img
-          src="https://cdn.midjourney.com/5b0cec06-2f37-4828-8602-316f6dbd0eb6/0_0.jpeg"
-          className="h-40 w-48 rounded-lg"
-        />
+        <img src={image} className="h-40 w-56 rounded-lg" />
       </div>
-      <h6 className="font-semibold text-lg">Forest Yogo Retreat</h6>
-      <p>ncdksds</p>
-      <span className="block">Date :sd</span>
-      <span className="block">Location :sd</span>
-      <span className="block">Price :sd</span>
+      <h6 className="font-semibold text-lg">{title && title}</h6>
+      <p>{description && description}</p>
+      <span className="block">Date : {newDate && newDate}</span>
+      <span className="block">Location : {location && location}</span>
+      <span className="block">Price : {price && price}</span>
     </div>
   );
 };

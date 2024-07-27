@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .splide__arrows > .splide__arrow {
-  bottom: -50px !important;
+  bottom: -10px !important;
   top: inherit;
   background-color: #2a077e;
   color: white;
