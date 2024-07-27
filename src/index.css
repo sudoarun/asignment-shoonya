@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.splide__arrows > .splide__arrow {
+  bottom: -50px !important;
+  top: inherit;
+  background-color: #2a077e;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 6%;
+  width: auto;
+}
+.splide__arrows > .splide__arrow--prev {
+  left: 50%;
+  transform: translateX(-115%);
+}
+.splide__arrows > .splide__arrow--next {
+  right: 50%;
+  transform: translateX(110%);
+}

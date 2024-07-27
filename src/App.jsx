@@ -1,8 +1,10 @@
 import React from "react";
+import Slides from "./components/Slides";
 
 const App = () => {
   const imgURL =
     "https://cdn.midjourney.com/32923aeb-db8c-4c27-8e9d-fb82928b7fc1/0_2.jpeg";
+
   return (
     <>
       <header>
@@ -26,10 +28,29 @@ const App = () => {
       </section>
       <section>
         <div className="container mx-auto mt-5">
-          <div className="flex justify-between">
-            <button className="bg-blue-950 px-3 py-1 text-white rounded-md">
-              Select date
-            </button>
+          <div className="flex justify-between items-center">
+            <div className="flex gap-4 items-center">
+              <select
+                name="Yoga"
+                id=""
+                className="bg-blue-950 px-1 py-1 text-white rounded-md"
+              >
+                <option value="none">Flter by date</option>
+                <option value="saab">2023-2024</option>
+                <option value="opel">2024-2025</option>
+              </select>
+              <select
+                name="Yoga"
+                id=""
+                className="bg-blue-950 px-1 py-1 text-white rounded-md"
+              >
+                <option value="none">Flter by Type</option>
+                <option value="yoga">Yog</option>
+                <option value="meditation">Meditation</option>
+                <option value="detok">Detox</option>
+              </select>
+            </div>
+
             <input
               type="search"
               placeholder="Search here..."
@@ -40,22 +61,13 @@ const App = () => {
       </section>
       <section>
         <div className="container mx-auto mt-5">
-          <div>
-            <div className="bg-[#E0D9CF] w-auto">
-              <div>
-                <img
-                  src="https://cdn.midjourney.com/5b0cec06-2f37-4828-8602-316f6dbd0eb6/0_0.jpeg"
-                  className="h-40 w-48"
-                />
-              </div>
-              <h6>Forest Yogo Retreat</h6>
-              <p>ncdksds</p>
-              <span>Date :sd</span>
-              <span>Date :sd</span>
-              <span>Date :sd</span>
-            </div>
-          </div>
+          <Slides />
         </div>
+      </section>
+      <section className="pb-5 pt-20">
+        <h6 className="text-center">
+          2024 Wellness Retreats. All rights reserved.
+        </h6>
       </section>
     </>
   );
